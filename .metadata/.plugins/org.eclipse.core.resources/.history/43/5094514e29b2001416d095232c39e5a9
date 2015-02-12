@@ -1,0 +1,17 @@
+
+public class Timer extends Thread {
+	@Override
+	public void run() {
+		int iterations = 5;
+		try {
+			for (int i = 0; i < iterations; i++) {
+				System.out.println("Time: " + i);
+				sleep(1000);
+			}
+		} catch (InterruptedException e) {
+			System.err.println(e);
+		}
+		
+	}
+
+}

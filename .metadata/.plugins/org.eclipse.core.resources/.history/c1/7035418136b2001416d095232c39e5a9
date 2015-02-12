@@ -1,0 +1,11 @@
+
+public class MonicaAndChandlerJob implements Runnable {
+	public static void main(String[] args) {
+		private BankAccount account = new BankAccount();
+	}
+	
+	public void run() {
+
+	}
+
+}

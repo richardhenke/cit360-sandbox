@@ -1,0 +1,24 @@
+
+public class MonicaAndChandlerJob implements Runnable {
+	public BankAccount account = new BankAccount();
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public void run() {
+
+	}
+	
+	private void makeWithdrawl(int amount) {
+		if (account.getBalance() >= amount) {
+			System.out.println(Thread.currentThread().getName() + " is about to withdraw");
+			try {
+				System.out.println(Thread.currentThread().getName() + " is going to sleep");
+				Thread.sleep(500);
+			} catch (InterruptedException e) {e.printStackTrace(); }
+			
+		}
+	}
+
+}
