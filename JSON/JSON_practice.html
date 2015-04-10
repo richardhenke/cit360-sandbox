@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CIT 360 | JSON Demo</title>
+	<link rel="stylesheet" type="text/css" href="journal_report.css">
+	<script type="text/javascript">
+		function ajax_get_json() {
+			var hr = new XMLHttpRequest();
+			hr.open("GET", "entries.json", true);
+			hr.setRequestHeader("Content-type", "application/json", true);
+			hr.onreadystatechange = function() {
+				if (hr.readyState == 4 && hr.status == 200) {
+					var data = JSON.parse(hr.responseText);
+					var results = document.getElementById("results");
+					results.innerHTML = "";
+					data.entries.forEach(function(obj) {
+						results.innerHTML += "<div class='entry'><div class='entry_date'>" + obj.date + "</div><div class='entry_body'>" +  obj.entry + "</div></div>";
+					});
+				}
+			}
+			hr.send(null);
+		    //This is where we could have an animated gif loader! :D
+		    results.innerHTML = "requesting...";
+		}
+	</script>
+</head>
+<body>
+	<h1>Richard Henke | CIT 360 Journal Report</h1>
+	<div id="results"></div>
+	<script type="text/javascript">ajax_get_json();</script>
+</body>
+</html>

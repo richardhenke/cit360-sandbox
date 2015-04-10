@@ -1,0 +1,91 @@
+/*FONTS*/
+@import url(http://fonts.googleapis.com/css?family=Pompiere|Raleway);
+
+body {
+	background-color:#473E3F;
+}
+h1 {
+	color:white;
+	text-align:center;
+	margin:60px;
+	font-family: 'Pompiere', cursive;
+	font-size: 3em;
+	text-shadow: 4px 5px rgba(0,0,0,0.49);
+}
+div#results .entry {
+	margin:auto;
+	margin-top: 30px;
+	padding: 35px;
+	border-radius: 50px;
+	font-size:0px;
+	font-size:1em;
+	shadow-box:5px 5px;
+	-webkit-box-shadow: 22px 23px 2px -12px rgba(0,0,0,0.49);
+	-moz-box-shadow: 22px 23px 2px -12px rgba(0,0,0,0.49);
+	box-shadow: 22px 23px 2px -12px rgba(0,0,0,0.49);
+	border:black solid 1px;
+	width:30%;
+	height:20%;
+	-webkit-transition: width 2s, height 4s background-color 3s; /* For Safari 3.1 to 6.0 */
+	transition: width 2s, height 4s, background-color 3s;
+	font-family: 'Raleway', sans-serif;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes flyInFromRight {
+	100% {left:3000px; top:-2000px;}
+	50% {left:300px; top:0px;}
+	40% {left:0px; top:0px;}
+	}
+	/* Chrome, Safari, Opera */
+@-webkit-keyframes flyInFromLeft {
+	100% {left:-3000px; top:2000px;}
+	50% {left:-300px; top:0px;}
+	40% {left:0px; top:0px;}
+	}
+
+	div#results .entry:nth-child(2n) {
+		position: relative;
+		-webkit-animation-name: flyInFromRight; /* Chrome, Safari, Opera */
+		-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+		-webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+		-webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+		-webkit-animation-timing-function: ease-in-out;
+	}
+	div#results .entry:nth-child(2n + 1) {
+		position: relative;
+		-webkit-animation-name: flyInFromLeft; /* Chrome, Safari, Opera */
+		-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+		-webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+		-webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+		-webkit-animation-timing-function: ease-in-out;
+	}
+
+	div#results .entry:nth-child(2n) {
+		background-color: #F9E559; /* YELLOW */
+	}
+	div#results .entry:nth-child(2n):hover {
+		background-color: #EF7126; /* ORANGE */
+		width: 60%;
+	}
+
+	div#results .entry:nth-child(2n + 1) {
+		background-color:#6CCECB; /*  BLUE  */	
+	}
+	div#results .entry:nth-child(2n + 1):hover {
+		background-color:#6CCECB; /*  BLUE  */
+		width: 60%;
+	}
+
+	div#results .entry:nth-child(3n - 1) {
+		background-color: #EF7126; /* ORANGE */
+	}
+
+	div#results .entry:nth-child(3n - 1):hover {
+		background-color: #F9E559; /* YELLOW */
+		width: 60%;
+	}
+
+	div#results .entry_date {
+		font-size:1.2em;
+		margin-bottom:10px;
+	}
